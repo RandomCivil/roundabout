@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>roundabout轮播</title>
+	<link type="text/css" href="1.css" rel="stylesheet"/>
+	<script type="text/javascript" src='seed-min.js'></script>
+</head>
+<body>
+	<div id='wrap' ms-controller='roundabout'>
+		<div id='roundabout'>
+			<ul>
+				<li ms-repeat='img_list' 
+				ms-class-hide='$index<cur-1||$index>cur+1' 
+				ms-class-left='$index==cur-1||(cur==0&&$index==img_list.size()-1)' 
+				ms-class-right='$index==cur+1||(cur==img_list.size()-1&&$index==0)' 
+				ms-class-middle='$index==cur'><img ms-src="img/{{el}}.jpeg"></li>
+			</ul>
+		</div>
+		<div id='jump'>
+			<ul>
+				<li ms-repeat='img_list' ms-class-on='cur==$index'></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src='index.js'></script>
+</body>
+</html>
