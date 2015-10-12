@@ -12,7 +12,7 @@
 		<div id='roundabout'>
 			<ul>
 				<li ms-repeat='img_list' 
-				ms-class-hide='$index<cur-1||$index>cur+1' 
+				ms-class-hide='($index<cur-1&&(cur!=img_list.size()-1||$index!=0))||($index>cur+1&&(cur!=0||$index!=img_list.size()-1))' 
 				ms-class-left='$index==cur-1||(cur==0&&$index==img_list.size()-1)' 
 				ms-class-right='$index==cur+1||(cur==img_list.size()-1&&$index==0)' 
 				ms-class-middle='$index==cur'><img ms-src="img/{{el}}.jpeg"></li>

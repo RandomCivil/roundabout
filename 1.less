@@ -18,32 +18,11 @@ img{
 	overflow: hidden;
 	border:1px solid @border-color;
 }
-.hide{
-	width: 530px;
-    height: 100px;
-    opacity: 0;
-    left: -530px;
-    z-index: 0;
-    margin-top: 85px;
-}
 #roundabout{
 	height: 270px;
 	li{
 		display: inline-block;
 		position: absolute;
-	}
-	.left,.right{
-		width: 530px;
-		height: 224px;
-		opacity: 0.4;
-		z-index: 1;
-		margin-top: 23px;
-	}
-	.left{
-		left: 0px;
-	}
-	.right{
-		left: 660px;
 	}
 }
 .middle{
@@ -53,6 +32,27 @@ img{
     left: 275px;
     z-index: 2;
     margin-top: 0px;
+}
+.left,.right{
+	width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    z-index: 1;
+    margin-top: 23px;
+}
+.left{
+    left: 0px;
+}
+.right{
+    left: 660px;
+}
+.hide{
+	width: 530px;
+    height: 100px;
+    opacity: 0;
+    left: -530px;
+    z-index: 0;
+    margin-top: 85px;
 }
 #jump{
 	border:1px solid @border-color;
