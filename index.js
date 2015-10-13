@@ -19,10 +19,19 @@ require('avalon-min',function(avalon) {
 			roundabout.cur=i;
 		},
 		spec_jump:function(i){
-			roundabout.cur=i;
-			avalon($('img'+prev(i))).removeClass(animate_class).addClass('jump-prev');
-			avalon($('img'+i)).removeClass(animate_class).addClass('jump-middle');
-			avalon($('img'+next(i))).removeClass(animate_class).addClass('jump-next');
+			var cur=roundabout.cur;
+			if(cur-prev(i)==0||cur-next(i)==0){
+				var dir=1;
+				if(cur-prev(i)==0)
+					dir=2;
+				roundabout.jump(i,dir);
+
+			}else{
+				roundabout.cur=i;
+				avalon($('img'+prev(i))).removeClass(animate_class).addClass('jump-prev');
+				avalon($('img'+i)).removeClass(animate_class).addClass('jump-middle');
+				avalon($('img'+next(i))).removeClass(animate_class).addClass('jump-next');
+			}
 		}
 	});
 	function prev(now){

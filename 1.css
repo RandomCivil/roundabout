@@ -1,1 +1,326 @@
-.animated{animation-duration:1s}.to-right1{animation-name:to-right1}.to-right2{animation-name:to-right2}.to-right3{animation-name:to-right3}.to-right4{animation-name:to-right4}.to-left1{animation-name:to-left1}.to-left2{animation-name:to-left2}.to-left3{animation-name:to-left3}.to-left4{animation-name:to-left4}.jump-prev{animation-name:jump-prev}.jump-middle{animation-name:jump-middle}.jump-next{animation-name:jump-next}@keyframes jump-prev{0%{left:585px;margin-top:135px;width:0;height:0;opacity:0}100%{width:530px;height:224px;opacity:.4;left:0;z-index:1;margin-top:23px}}@keyframes jump-middle{0%{left:585px;margin-top:135px;width:0;height:0;opacity:0}100%{width:640px;height:270px;opacity:1;left:275px;z-index:2;margin-top:0}}@keyframes jump-next{0%{left:585px;margin-top:135px;width:0;height:0;opacity:0}100%{width:530px;height:224px;opacity:.4;left:660px;z-index:1;margin-top:23px}}@keyframes to-right1{0%{width:530px;height:100px;opacity:0;left:-530px;z-index:0;margin-top:85px}100%{width:530px;height:224px;opacity:.4;left:0;z-index:1;margin-top:23px}}@keyframes to-right2{0%{width:530px;height:224px;opacity:.4;left:0;z-index:1;margin-top:23px}100%{width:640px;height:270px;opacity:1;left:275px;z-index:2;margin-top:0}}@keyframes to-right3{0%{width:640px;height:270px;opacity:1;left:275px;z-index:2;margin-top:0}100%{width:530px;height:224px;opacity:.4;left:660px;z-index:1;margin-top:23px}}@keyframes to-right4{0%{width:530px;height:224px;opacity:.4;left:660px;z-index:1;margin-top:23px}100%{width:530px;height:100px;opacity:0;left:1190px;z-index:0;margin-top:85px}}@keyframes to-left1{0%{width:530px;height:100px;opacity:0;left:1190px;z-index:0;margin-top:85px}100%{width:530px;height:224px;opacity:.4;left:660px;z-index:1;margin-top:23px}}@keyframes to-left2{0%{width:530px;height:224px;opacity:.4;left:660px;z-index:1;margin-top:23px}100%{width:640px;height:270px;opacity:1;left:275px;z-index:2;margin-top:0}}@keyframes to-left3{0%{width:640px;height:270px;opacity:1;left:275px;z-index:2;margin-top:0}100%{width:530px;height:224px;opacity:.4;left:0;z-index:1;margin-top:23px}}@keyframes to-left4{0%{width:530px;height:224px;opacity:.4;left:0;z-index:1;margin-top:23px}100%{width:530px;height:100px;opacity:0;left:-530px;z-index:0;margin-top:85px}}*{padding:0;margin:0}li{list-style-type:none}img{display:block;height:100%;width:100%}#wrap{position:relative;width:1190px;overflow:hidden}#roundabout{height:270px}#roundabout li{display:inline-block;position:absolute}.middle{width:640px;height:270px;opacity:1;left:275px;z-index:2;margin-top:0}.left,.right{width:530px;height:224px;opacity:.4;z-index:1;margin-top:23px}.left{left:0}.right{left:660px}.hide{width:530px;height:100px;opacity:0;left:-530px;z-index:0;margin-top:85px}#jump{text-align:center}#jump ul{display:inline-block}#jump li{background:none repeat scroll 0 0 #c3c3c3;border-radius:5px 5px 5px 5px;cursor:pointer;float:left;height:10px;margin:0 10px;overflow:hidden;width:10px}#jump .on{background:none repeat scroll 0 0 #69aaec}#controls a{position:absolute;display:block;height:45px;width:45px;z-index:40;top:100px}#controls .left_arrow{background-image:url('img/control_left.png');left:10px}#controls .right_arrow{background-image:url('img/control_right.png');right:10px}/*# sourceMappingURL=1.css.map */
+.animated {
+  animation-duration: 1s;
+}
+.to-right1 {
+  animation-name: to-right1;
+}
+.to-right2 {
+  animation-name: to-right2;
+}
+.to-right3 {
+  animation-name: to-right3;
+}
+.to-right4 {
+  animation-name: to-right4;
+}
+.to-left1 {
+  animation-name: to-left1;
+}
+.to-left2 {
+  animation-name: to-left2;
+}
+.to-left3 {
+  animation-name: to-left3;
+}
+.to-left4 {
+  animation-name: to-left4;
+}
+.jump-prev {
+  animation-name: jump-prev;
+}
+.jump-middle {
+  animation-name: jump-middle;
+}
+.jump-next {
+  animation-name: jump-next;
+}
+.middle {
+  width: 640px;
+  height: 270px;
+  opacity: 1;
+  z-index: 2;
+  margin-top: 0;
+  left: 275px;
+}
+.left {
+  width: 530px;
+  height: 224px;
+  opacity: 0.4;
+  z-index: 1;
+  margin-top: 23px;
+  left: 0;
+}
+.right {
+  width: 530px;
+  height: 224px;
+  opacity: 0.4;
+  z-index: 1;
+  margin-top: 23px;
+  left: 660px;
+}
+.hide {
+  width: 530px;
+  height: 100px;
+  opacity: 0;
+  z-index: 0;
+  margin-top: 0;
+  left: -530px;
+}
+@keyframes jump-prev {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+    margin-top: 135px;
+    left: 585px;
+  }
+  100% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    z-index: 1;
+    margin-top: 23px;
+    left: 0;
+  }
+}
+@keyframes jump-middle {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+    margin-top: 135px;
+    left: 585px;
+  }
+  100% {
+    width: 640px;
+    height: 270px;
+    opacity: 1;
+    z-index: 2;
+    margin-top: 0;
+    left: 275px;
+  }
+}
+@keyframes jump-next {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+    margin-top: 135px;
+    left: 585px;
+  }
+  100% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    z-index: 1;
+    margin-top: 23px;
+    left: 660px;
+  }
+}
+@keyframes to-right1 {
+  0% {
+    width: 530px;
+    height: 100px;
+    opacity: 0;
+    left: -530px;
+    z-index: 0;
+    margin-top: 85px;
+  }
+  100% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 0;
+    z-index: 1;
+    margin-top: 23px;
+  }
+}
+@keyframes to-right2 {
+  0% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 0;
+    z-index: 1;
+    margin-top: 23px;
+  }
+  100% {
+    width: 640px;
+    height: 270px;
+    opacity: 1;
+    left: 275px;
+    z-index: 2;
+    margin-top: 0;
+  }
+}
+@keyframes to-right3 {
+  0% {
+    width: 640px;
+    height: 270px;
+    opacity: 1;
+    left: 275px;
+    z-index: 2;
+    margin-top: 0;
+  }
+  100% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 660px;
+    z-index: 1;
+    margin-top: 23px;
+  }
+}
+@keyframes to-right4 {
+  0% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 660px;
+    z-index: 1;
+    margin-top: 23px;
+  }
+  100% {
+    width: 530px;
+    height: 100px;
+    opacity: 0;
+    left: 1190px;
+    z-index: 0;
+    margin-top: 85px;
+  }
+}
+@keyframes to-left1 {
+  0% {
+    width: 530px;
+    height: 100px;
+    opacity: 0;
+    left: 1190px;
+    z-index: 0;
+    margin-top: 85px;
+  }
+  100% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 660px;
+    z-index: 1;
+    margin-top: 23px;
+  }
+}
+@keyframes to-left2 {
+  0% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 660px;
+    z-index: 1;
+    margin-top: 23px;
+  }
+  100% {
+    width: 640px;
+    height: 270px;
+    opacity: 1;
+    left: 275px;
+    z-index: 2;
+    margin-top: 0;
+  }
+}
+@keyframes to-left3 {
+  0% {
+    width: 640px;
+    height: 270px;
+    opacity: 1;
+    left: 275px;
+    z-index: 2;
+    margin-top: 0;
+  }
+  100% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 0;
+    z-index: 1;
+    margin-top: 23px;
+  }
+}
+@keyframes to-left4 {
+  0% {
+    width: 530px;
+    height: 224px;
+    opacity: 0.4;
+    left: 0;
+    z-index: 1;
+    margin-top: 23px;
+  }
+  100% {
+    width: 530px;
+    height: 100px;
+    opacity: 0;
+    left: -530px;
+    z-index: 0;
+    margin-top: 85px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#wrap {
+  position: relative;
+  width: 1190px;
+  overflow: hidden;
+}
+#roundabout {
+  height: 270px;
+}
+#roundabout li {
+  display: inline-block;
+  position: absolute;
+}
+#jump {
+  text-align: center;
+}
+#jump ul {
+  display: inline-block;
+}
+#jump li {
+  background: none repeat scroll 0 0 #C3C3C3;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  float: left;
+  height: 10px;
+  margin: 0 10px;
+  overflow: hidden;
+  width: 10px;
+}
+#jump .on {
+  background: none repeat scroll 0 0 #69AAEC;
+}
+#controls a {
+  position: absolute;
+  display: block;
+  height: 45px;
+  width: 45px;
+  z-index: 40;
+  top: 100px;
+}
+#controls .left_arrow {
+  background-image: url('img/control_left.png');
+  left: 10px;
+}
+#controls .right_arrow {
+  background-image: url('img/control_right.png');
+  right: 10px;
+}
+/*# sourceMappingURL=1.css.map */

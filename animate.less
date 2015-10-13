@@ -34,57 +34,66 @@
 .jump-next{
 	animation-name:jump-next;
 }
+.middle{
+	.middle();
+}
+.left{
+	.left();
+}
+.right{
+	.right();
+}
+.hide{
+	.hide();
+}
+.state(@width,@height,@opacity,@z-index,@margin-top,@left){
+	width: @width;
+	height: @height;
+	opacity: @opacity;
+	z-index: @z-index;
+	margin-top: @margin-top;
+	left:@left;
+}
+.middle(){
+    .state(640px,270px,1,2,0,275px);
+}
+.left(){
+    .state(530px,224px,0.4,1,23px,0);
+}
+.right(){
+    .state(530px,224px,0.4,1,23px,660px);
+}
+.hide(){
+    .state(530px,100px,0,0,0,-530px);
+}
+.jump-state(){
+	.state(0,0,0,0,135px,585px);
+}
 @keyframes jump-prev{
 	0% {
-		left:585px;
-		margin-top: 135px;
-		width: 0;
-		height: 0;
-		opacity: 0;
+		.jump-state();
 	}
 	100% {  
-		width: 530px;
-		height: 224px;
-		opacity: 0.4;
-		left: 0;
-		z-index: 1;
-		margin-top: 23px;
+		.left();
 	}
 }
 @keyframes jump-middle{
 	0% {
-		left:585px;
-		margin-top: 135px;
-		width: 0;
-		height: 0;
-		opacity: 0;
+		.jump-state();
 	}
 	100% {  
-		width: 640px;
-		height: 270px;
-		opacity: 1;
-		left: 275px;
-		z-index: 2;
-		margin-top: 0px;
+		.middle();
 	}
 }
 @keyframes jump-next{
 	0% {
-		left:585px;
-		margin-top: 135px;
-		width: 0;
-		height: 0;
-		opacity: 0;
+		.jump-state();
 	}
 	100% {  
-		width: 530px;
-		height: 224px;
-		opacity: 0.4;
-		left: 660px;
-		z-index: 1;
-		margin-top: 23px;
+		.right();
 	}
 }
+
 @keyframes to-right1{
 	0% {
 		width: 530px;
