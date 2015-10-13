@@ -9,18 +9,24 @@
 </head>
 <body>
 	<div id='wrap' ms-controller='roundabout'>
+		<div id='controls'>
+			<a class='left_arrow' href="javascript:;" ms-click='jump(cur==0?img_list.size()-1:cur-1,1)'></a>
+			<a class='right_arrow' href="javascript:;" ms-click='jump(cur==img_list.size()-1?0:cur+1,2)'></a>
+		</div>
 		<div id='roundabout'>
 			<ul>
-				<li ms-repeat='img_list' 
+				<li ms-repeat-img='img_list' 
 				ms-class-hide='($index<cur-1&&(cur!=img_list.size()-1||$index!=0))||($index>cur+1&&(cur!=0||$index!=img_list.size()-1))' 
 				ms-class-left='$index==cur-1||(cur==0&&$index==img_list.size()-1)' 
 				ms-class-right='$index==cur+1||(cur==img_list.size()-1&&$index==0)' 
-				ms-class-middle='$index==cur'><img ms-src="img/{{el}}.jpeg"></li>
+				ms-class-middle='$index==cur' class='animated' ms-attr-id='img{{$index}}'>
+					<img ms-attr-src="img/{{img}}.jpeg">
+				</li>
 			</ul>
 		</div>
 		<div id='jump'>
 			<ul>
-				<li ms-repeat='img_list' ms-class-on='cur==$index'></li>
+				<li ms-repeat='img_list' ms-class-on='cur==$index' ms-click='spec_jump($index)'></li>
 			</ul>
 		</div>
 	</div>

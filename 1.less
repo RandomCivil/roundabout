@@ -1,4 +1,4 @@
-@border-color:red;
+@import 'animate.less';
 
 *{
 	padding: 0;
@@ -16,7 +16,6 @@ img{
 	position: relative;
 	width: 1190px;
 	overflow: hidden;
-	border:1px solid @border-color;
 }
 #roundabout{
 	height: 270px;
@@ -41,7 +40,7 @@ img{
     margin-top: 23px;
 }
 .left{
-    left: 0px;
+    left: 0;
 }
 .right{
     left: 660px;
@@ -55,19 +54,39 @@ img{
     margin-top: 85px;
 }
 #jump{
-	border:1px solid @border-color;
+	text-align: center;
+	ul{
+		display: inline-block;
+	}
 	li{
 		background: none repeat scroll 0 0 #C3C3C3;
 		border-radius: 5px 5px 5px 5px;
 		cursor: pointer;
-		display: inline-block;
+		float: left;
 		height: 10px;
-		margin: 0 5px;
+		margin: 0 10px;
 		overflow: hidden;
-		vertical-align: top;
 		width: 10px;
 	}
 	.on{
 		background: none repeat scroll 0 0 #69AAEC;
+	}
+}
+#controls{
+	a{
+		position: absolute;
+		display: block;
+		height: 45px;
+		width: 45px;
+		z-index: 40;
+		top: 100px;
+	}
+	.left_arrow{
+		background-image: url('img/control_left.png');
+		left:10px;
+	}
+	.right_arrow{
+		background-image: url('img/control_right.png');
+		right:10px;
 	}
 }
